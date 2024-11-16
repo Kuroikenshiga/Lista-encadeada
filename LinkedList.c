@@ -12,19 +12,21 @@ struct Node* createNode(int value);
 void printList();
 int isEmpty();
 void add( int value);
+int getElement(int position);
 
 struct Node *root = NULL;
-
+int SIZE = 0;
 int main() {
 
 	add(1);
 	add(2);
 	add(3);
 	printList();
-	removeNode(5);
+	removeNode(1);
 	printf("_______________________________________________\n");
 	printList();
-
+	printf("_______________________________________________\n");
+	printf("%d", getElement(0));
 	return 0;
 }
 
@@ -39,6 +41,7 @@ void removeNode( int value) {
 		struct Node *auxPtr = root->next;
 		free(root);
 		root = auxPtr;
+		SIZE--;
 		return;
 	}
 	struct Node* auxPtr = root;
@@ -47,6 +50,7 @@ void removeNode( int value) {
 			struct Node *aux = auxPtr->next->next;
 			free(auxPtr->next);
 			auxPtr->next = aux;
+			SIZE--;
 			return;
 		}
 		auxPtr = auxPtr->next;
@@ -55,6 +59,7 @@ void removeNode( int value) {
 void add(int value) {
 	if (root == NULL) {
 		root = createNode(value);
+		SIZE++;
 		return;
 	}
 	struct Node* ptrAux = root;
@@ -62,6 +67,7 @@ void add(int value) {
 	while (1) {
 		if (ptrAux->next == NULL) {
 			ptrAux->next = createNode(value);
+			SIZE++;
 			return;
 		}
 		ptrAux = ptrAux->next;
@@ -77,6 +83,22 @@ void printList() {
 		printf("%d\n", ptrAux->value);
 		ptrAux = ptrAux->next;
 	}
+}
+
+int getElement(int position) {
+	if (position >= SIZE) {
+		printf("Error in position\n");
+		return NULL;
+	}
+	struct Node* auxPtr = root;
+	while (position >= 0) {
+		if (position == 0) {
+			return auxPtr->value;
+		}
+		auxPtr = auxPtr->next;
+		position--;
+	}
+	return NULL;
 }
 
 int isEmpty() {

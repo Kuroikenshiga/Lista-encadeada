@@ -1,2 +1,4 @@
 ﻿  LinkedList.c
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(91,3): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(101,2): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
   ListaEncadeada.vcxproj -> C:\Users\TeresaShySmile\source\repos\Estudando C\x64\Debug\ListaEncadeada.exe
