@@ -1,4 +1,7 @@
 ﻿  LinkedList.c
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(91,3): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(101,2): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(102,18): warning C4047: '==': 'ValueNode *' difere em níveis de indireção de 'int'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(111,51): warning C4047: '==': 'ValueNode *' difere em níveis de indireção de 'int'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(226,3): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(231,4): warning C4047: 'return': 'int' difere em níveis de indireção de 'ValueNode *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(236,2): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
   ListaEncadeada.vcxproj -> C:\Users\TeresaShySmile\source\repos\Estudando C\x64\Debug\ListaEncadeada.exe
