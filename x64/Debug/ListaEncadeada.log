@@ -1,7 +1,17 @@
 ﻿  LinkedList.c
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(102,18): warning C4047: '==': 'ValueNode *' difere em níveis de indireção de 'int'
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(111,51): warning C4047: '==': 'ValueNode *' difere em níveis de indireção de 'int'
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(226,3): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(231,4): warning C4047: 'return': 'int' difere em níveis de indireção de 'ValueNode *'
-C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(236,2): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(114,18): warning C4047: '==': 'ValueNode *' difere em níveis de indireção de 'int'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(123,51): warning C4047: '==': 'ValueNode *' difere em níveis de indireção de 'int'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(238,3): warning C4033: 'getElementInt' deve retornar um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(242,3): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(252,2): warning C4047: 'return': 'int' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(258,3): warning C4033: 'getElementChar' deve retornar um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(262,3): warning C4047: 'return': 'char' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(272,2): warning C4047: 'return': 'char' difere em níveis de indireção de 'void *'
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(278,3): warning C4033: 'getElementString' deve retornar um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(297,3): warning C4033: 'getElementReal' deve retornar um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(311,2): warning C4033: 'getElementReal' deve retornar um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(253,1): warning C4715: 'getElementInt': nem todos os caminhos de controle retornam um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(312,1): warning C4715: 'getElementReal': nem todos os caminhos de controle retornam um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(293,1): warning C4715: 'getElementString': nem todos os caminhos de controle retornam um valor
+C:\Users\TeresaShySmile\source\repos\Estudando C\ListaEncadeada\LinkedList.c(273,1): warning C4715: 'getElementChar': nem todos os caminhos de controle retornam um valor
   ListaEncadeada.vcxproj -> C:\Users\TeresaShySmile\source\repos\Estudando C\x64\Debug\ListaEncadeada.exe

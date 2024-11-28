@@ -21,12 +21,24 @@ void addInt(int value);
 void addChar(char value);
 void addString(char value[]);
 void addFloat(float value);
-int getElement(int position);
-
+int getElementInt(int position);
+float getElementReal(int position);
+char* getElementString(int position);
+char getElementChar(int position);
+void clearList();
+void clearListRecursive(struct Node* ptr);
 struct Node *root = NULL;
 int SIZE = 0;
 enum DataType dataType = Integer;
 int main() {
+	addChar('A');
+	addChar('B');
+	addChar('C');
+	addChar('D');
+	addChar('F');
+	printList();
+	clearList();
+	printf("-----------------------------------");
 	printList();
 	return 0;
 }
@@ -193,7 +205,7 @@ void addFloat(float value) {
 
 void printList() {
 	if (root == NULL) {
-		printf("List empty");
+		printf("\nList empty\n");
 		return;
 	}
 	struct Node* ptrAux = root;
@@ -220,7 +232,11 @@ void printList() {
 	}
 }
 
-int getElement(int position) {
+int getElementInt(int position) {
+	if (dataType != Integer) {
+		printf("\nTipo de dados não comportado\n");
+		return;
+	}
 	if (position >= SIZE) {
 		printf("Error in position\n");
 		return NULL;
@@ -228,7 +244,7 @@ int getElement(int position) {
 	struct Node* auxPtr = root;
 	while (position >= 0) {
 		if (position == 0) {
-			return auxPtr->value;
+			return auxPtr->value->integer;
 		}
 		auxPtr = auxPtr->next;
 		position--;
@@ -236,10 +252,81 @@ int getElement(int position) {
 	return NULL;
 }
 
+char getElementChar(int position) {
+	if (dataType != Character) {
+		printf("\nTipo de dados não comportado\n");
+		return;
+	}
+	if (position >= SIZE) {
+		printf("Error in position\n");
+		return NULL;
+	}
+	struct Node* auxPtr = root;
+	while (position >= 0) {
+		if (position == 0) {
+			return auxPtr->value->character;
+		}
+		auxPtr = auxPtr->next;
+		position--;
+	}
+	return NULL;
+}
+
+char *getElementString(int position) {
+	if (dataType != String) {
+		printf("\nTipo de dados não comportado\n");
+		return;
+	}
+	if (position >= SIZE) {
+		printf("Error in position\n");
+		return NULL;
+	}
+	struct Node* auxPtr = root;
+	while (position >= 0) {
+		if (position == 0) {
+			return auxPtr->value->string;
+		}
+		auxPtr = auxPtr->next;
+		position--;
+	}
+	return NULL;
+}
+float getElementReal(int position) {
+	if (dataType != Real) {
+		printf("\nTipo de dados não comportado\n");
+		return;
+	}
+	if (position >= SIZE) {
+		printf("Error in position\n");
+		return 0;
+	}
+	struct Node* auxPtr = root;
+	while (position >= 0) {
+		if (position == 0) {
+			return auxPtr->value->real;
+		}
+		auxPtr = auxPtr->next;
+		position--;
+	}
+	return;
+}
 int isEmpty() {
 	if (root == NULL) {
 		return 1;
 	}
 	return 0;
+}
+void clearList() {
+	if (root == NULL)return;
+
+	clearListRecursive(root);
+
+	free(root);
+	root = NULL;
+}
+void clearListRecursive(struct Node* ptr) {
+	if (ptr == NULL)return;
+	clearListRecursive(ptr->next);
+	free(ptr->next);
 }
 
